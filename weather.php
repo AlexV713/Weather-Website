@@ -23,12 +23,27 @@
 
         <main>
 
-            <form action="index.html" method="GET">
-                <input type="text" name="city" placeholder="Portland, OR" required>
-                <button type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
-            </form>
+            <div id="current-day-forecast">
+                <h2 id="area">{{ info.data.city_name }}, {{ info.data.state_code }}</h2>
+                <h3 id="date"><?php echo date("Y/m/d") ?></h3>
+                <div id="weather">
+                    <div id="icon">
+                        <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[0].weather.icon + '.png'"
+                            class="icon" alt="An image depicting the current local weather.">
+                        <p>{{ info.data.data[0].weather.description }}</p>
+                    </div>
+                    <div id="temp">
+                        <h1>{{ info.data.data[0].max_temp }}&#8457;</h1>
+                        <h3>{{ info.data.data[0].min_temp }}</h3>
+                    </div>
+                </div>
+            </div>
+
+            <div id="upcoming-forecast">
+                <h3><?php echo date("Y-m-d", strtotime("+1 day")); ?></h3>
+
+            </div>
+
 
         </main>
 
@@ -56,7 +71,9 @@
             mounted() {
                 axios
 
-                    .get("https://api.weatherbit.io/v2.0/forecast/daily?key=8f4b01bfac974b5dabc1ceecd2f8adb6&units=I&country=US&city=" + this.$route.query.city)
+                    .get(
+                        "https://api.weatherbit.io/v2.0/forecast/daily?key=8f4b01bfac974b5dabc1ceecd2f8adb6&units=I&country=US&city=" +
+                        this.$route.query.city)
 
                     .then(response => {
                         this.info = response
