@@ -46,4 +46,44 @@ header h2 {
 #weather #temp h1 {
   margin-bottom: -0.5em;
 }
+
+#upcoming-forecast {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3em;
+}
+
+#upcoming-forecast #dates,
+#upcoming-forecast #temps-section {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+#upcoming-forecast #icons-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#upcoming-forecast #icons-section .icons {
+  width: 48px;
+  height: 48px;
+}
 /*# sourceMappingURL=styles.css.map */

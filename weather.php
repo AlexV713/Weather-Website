@@ -28,7 +28,8 @@
 
                 <div id="weather">
                     <div id="icon">
-                        <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[0].weather.icon + '.png'" alt="current look of the weather">
+                        <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[0].weather.icon + '.png'"
+                            alt="current look of the weather">
                         <p>{{ info.data.data[0].weather.description }}</p>
                     </div>
                     <div id="temp">
@@ -39,7 +40,74 @@
             </div>
 
             <div id="upcoming-forecast">
-                <h3><?php echo date("Y-m-d", strtotime("+1 day")); ?></h3>
+                <div id="dates">
+                    <p><?php echo date("Y-m-d", strtotime("+1 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+2 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+3 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+4 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+5 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+6 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+7 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+8 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+9 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+10 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+11 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+12 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+13 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+14 day")); ?></p>
+                    <p><?php echo date("Y-m-d", strtotime("+15 day")); ?></p>
+                </div>
+
+                <div id="icons-section">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[1].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[2].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[3].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[4].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[5].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[6].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[7].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[8].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[9].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[10].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[11].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[12].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[13].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[14].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                    <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[15].weather.icon + '.png'"
+                        alt="current look of the weather" class="icons">
+                </div>
+
+                <div id="temps-section">
+                    <p>{{ info.data.data[1].max_temp }}&#8457; / {{ info.data.data[1].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[2].max_temp }}&#8457; / {{ info.data.data[2].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[3].max_temp }}&#8457; / {{ info.data.data[3].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[4].max_temp }}&#8457; / {{ info.data.data[4].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[5].max_temp }}&#8457; / {{ info.data.data[5].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[6].max_temp }}&#8457; / {{ info.data.data[6].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[7].max_temp }}&#8457; / {{ info.data.data[7].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[8].max_temp }}&#8457; / {{ info.data.data[8].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[9].max_temp }}&#8457; / {{ info.data.data[9].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[11].max_temp }}&#8457; / {{ info.data.data[10].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[11].max_temp }}&#8457; / {{ info.data.data[11].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[12].max_temp }}&#8457; / {{ info.data.data[12].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[13].max_temp }}&#8457; / {{ info.data.data[13].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[14].max_temp }}&#8457; / {{ info.data.data[14].min_temp }}&#8457;</p>
+                    <p>{{ info.data.data[15].max_temp }}&#8457; / {{ info.data.data[15].min_temp }}&#8457;</p>
+                </div>
 
             </div>
 
