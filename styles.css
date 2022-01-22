@@ -3,4 +3,47 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+
+header {
+  text-align: center;
+}
+
+header h2 {
+  margin-bottom: -0.5em;
+}
+
+#weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3em;
+}
+
+#weather #icon {
+  text-align: center;
+}
+
+#weather #icon img {
+  height: 120px;
+  width: 120px;
+  margin-bottom: -1em;
+}
+
+#weather #temp {
+  text-align: center;
+}
+
+#weather #temp h1 {
+  margin-bottom: -0.5em;
+}
 /*# sourceMappingURL=styles.css.map */

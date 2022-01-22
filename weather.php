@@ -18,18 +18,17 @@
 <body>
     <div id="app">
         <header>
-
+            <h2 id="area">{{ info.data.city_name }}, {{ info.data.state_code }}</h2>
+            <h3 id="date"><?php echo date("Y/m/d") ?></h3>
         </header>
 
         <main>
 
             <div id="current-day-forecast">
-                <h2 id="area">{{ info.data.city_name }}, {{ info.data.state_code }}</h2>
-                <h3 id="date"><?php echo date("Y/m/d") ?></h3>
+
                 <div id="weather">
                     <div id="icon">
-                        <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[0].weather.icon + '.png'"
-                            class="icon" alt="An image depicting the current local weather.">
+                        <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[0].weather.icon + '.png'" alt="current look of the weather">
                         <p>{{ info.data.data[0].weather.description }}</p>
                     </div>
                     <div id="temp">
@@ -43,7 +42,6 @@
                 <h3><?php echo date("Y-m-d", strtotime("+1 day")); ?></h3>
 
             </div>
-
 
         </main>
 
