@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link rel="canonical" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -15,11 +18,12 @@
     <title>Weather Webpage</title>
 </head>
 
-<body>
+<body id="weather-page">
     <div id="app">
         <header>
             <h2 id="area">{{ info.data.city_name }}, {{ info.data.state_code }}</h2>
-            <h3 id="date"><?php echo date("Y/m/d") ?></h3>
+            <h3 id="date"><?php echo date("m/d/Y") ?></h3>
+            <p>{{ info.data.data[0].weather.description }}</p>
         </header>
 
         <main>
@@ -30,32 +34,31 @@
                     <div id="icon">
                         <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[0].weather.icon + '.png'"
                             alt="current look of the weather">
-                        <p>{{ info.data.data[0].weather.description }}</p>
                     </div>
                     <div id="temp">
                         <h1>{{ info.data.data[0].max_temp }}&#8457;</h1>
-                        <h3>{{ info.data.data[0].min_temp }}</h3>
+                        <h3>{{ info.data.data[0].min_temp }}&#8457;</h3>
                     </div>
                 </div>
             </div>
 
             <div id="upcoming-forecast">
                 <div id="dates">
-                    <p><?php echo date("Y-m-d", strtotime("+1 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+2 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+3 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+4 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+5 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+6 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+7 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+8 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+9 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+10 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+11 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+12 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+13 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+14 day")); ?></p>
-                    <p><?php echo date("Y-m-d", strtotime("+15 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+1 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+2 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+3 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+4 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+5 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+6 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+7 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+8 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+9 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+10 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+11 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+12 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+13 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+14 day")); ?></p>
+                    <p><?php echo date("m-d-Y", strtotime("+15 day")); ?></p>
                 </div>
 
                 <div id="icons-section">
@@ -114,8 +117,9 @@
         </main>
 
         <footer>
-
+            <p>Copyright &#38; <?php echo date("Y"); ?> Alejandro Valerio </p>
         </footer>
+        
         <h2 class="data">Raw data from the API call (remove when you are done developing this page)</h2>
         <pre class="data">{{ info }}</pre>
     </div>
@@ -136,7 +140,6 @@
             },
             mounted() {
                 axios
-
                     .get(
                         "https://api.weatherbit.io/v2.0/forecast/daily?key=8f4b01bfac974b5dabc1ceecd2f8adb6&units=I&country=US&city=" +
                         this.$route.query.city)

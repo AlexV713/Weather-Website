@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="styles.css" rel="stylesheet" type="text/css">
     <link rel="canonical" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
     <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -16,23 +19,22 @@
 </head>
 
 <body>
-        <header>
 
-        </header>
+<header id="home-header">
+    <h1>16-Day Weather Forecast</h1>
+</header>
 
         <main>
 
             <form action="weather.php" method="GET">
                 <input type="text" name="city" placeholder="Portland, OR" required>
-                <button type="submit">
-                    <i class="fas fa-search"></i>
-                </button>
+                <input type="submit" value="Search">
             </form>
 
         </main>
 
         <footer>
-
+            <p>Copyright &#38; <?php echo date("Y"); ?> Alejandro Valerio </p>
         </footer>
     </div>
 </body>

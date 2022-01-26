@@ -2,11 +2,37 @@ body
     margin: 0 
     padding: 0
     overflow-x: hidden
+    font-family: 'Roboto', sans-serif
+    background: linear-gradient(0deg, #7cbffa, #0c6bfa) no-repeat center center fixed
 
 header 
     text-align: center
+    color: white
     h2 
         margin-bottom: -0.5em
+
+#home-header 
+    margin-top: 5em
+
+form 
+    display: grid 
+    place-items: center
+    grid-gap: 1em
+    margin-top: 25%
+    input[type=text]
+        height: 35px 
+        width: 250px
+        border-radius: 15px
+        border: solid white 1px
+        padding: 0.5em
+        font-size: 1.2rem
+    input[type=submit]
+        border-radius: 25px
+        border: solid white 1px
+        background-color: white
+        padding: 0.5em 1em
+        font-size: 1.2rem
+        cursor: pointer
 
 #weather 
     display: flex 
@@ -22,6 +48,7 @@ header
             margin-bottom: -1em 
     #temp 
         text-align: center
+        color: white
         h1 
             margin-bottom: -0.5em
 
@@ -31,7 +58,10 @@ header
     flex-wrap: wrap 
     justify-content: center 
     align-items: center
-    gap: 3em
+    gap: 2em
+    margin-left: 0.4em 
+    margin-right: 0.4em
+    color: white
     #dates,
     #temps-section 
         font-size: 1.2rem
@@ -42,3 +72,64 @@ header
         .icons 
             width: 48px 
             height: 48px
+
+footer 
+    text-align: center
+    font-size: 0.7rem
+    font-style: italic
+
+.data 
+    display: none
+
+/* Tablet Stylesheets */
+/* @media only screen and (min-width: 480px) */
+
+/* Desktop Stylesheets */
+@media only screen and (min-width: 1025px) 
+    header 
+        font-size: 1.2rem
+
+    #home-header
+        margin-top: 4em
+
+    form
+        margin-top: 5%
+
+    #weather 
+        display: flex 
+        flex-direction: row 
+        justify-content: center 
+        align-items: center
+        gap: 3em
+        #icon 
+            text-align: center
+            img
+                height: 150px 
+                width: 150px
+                margin-bottom: -1em 
+        #temp 
+            text-align: center
+            color: white
+            font-size: 1.3rem
+            h1 
+                margin-bottom: -0.5em
+
+    #upcoming-forecast 
+        display: flex 
+        flex-direction: row 
+        flex-wrap: wrap 
+        justify-content: center 
+        align-items: center
+        gap: 2em
+        color: white
+        margin-top: 1em
+        #dates,
+        #temps-section 
+            font-size: 1.6rem
+            line-height: 1.5
+        #icons-section
+            display: flex
+            flex-direction: column
+            .icons 
+                width: 64px 
+                height: 64px
