@@ -20,9 +20,11 @@
 
 <body>
 
-<header id="home-header">
-    <h1>16-Day Weather Forecast</h1>
-</header>
+    <div id="home-container">
+
+        <header id="home-header">
+            <h1>16-Day Weather Forecast</h1>
+        </header>
 
         <main>
 
@@ -33,10 +35,12 @@
 
         </main>
 
-        <footer>
+        <footer id="home-footer">
             <p>Copyright &#38; <?php echo date("Y"); ?> Alejandro Valerio </p>
         </footer>
+
     </div>
+
 </body>
 
 </html>

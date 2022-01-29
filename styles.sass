@@ -1,15 +1,26 @@
-body 
+body,
+html 
     margin: 0 
     padding: 0
     overflow-x: hidden
     font-family: 'Roboto', sans-serif
-    background: linear-gradient(0deg, #7cbffa, #0c6bfa) no-repeat center center fixed
+    background-image: linear-gradient(0deg, #7cbffa, #0c6bfa)
+    background-repeat: no-repeat
+    background-size: cover
 
 header 
     text-align: center
     color: white
+    font-size: 1.2rem
     h2 
         margin-bottom: -0.5em
+
+#home-container
+    padding-top: 2.5em
+    position: relative 
+    min-height: 100vh 
+    margin-left: 2em
+    margin-right: 2em
 
 #home-header 
     margin-top: 5em
@@ -30,6 +41,7 @@ form
         border-radius: 25px
         border: solid white 1px
         background-color: white
+        color: black
         padding: 0.5em 1em
         font-size: 1.2rem
         cursor: pointer
@@ -53,30 +65,35 @@ form
             margin-bottom: -0.5em
 
 #upcoming-forecast 
-    display: flex 
-    flex-direction: row 
-    flex-wrap: wrap 
-    justify-content: center 
-    align-items: center
-    gap: 2em
-    margin-left: 0.4em 
-    margin-right: 0.4em
+    padding-top: 2em
     color: white
-    #dates,
-    #temps-section 
-        font-size: 1.2rem
-        line-height: 1.5
-    #icons-section
-        display: flex
-        flex-direction: column
-        .icons 
-            width: 48px 
-            height: 48px
+    margin-left: 0.5em
+    margin-right: 0.5em
+    #test
+        .days
+            display: flex
+            flex-direction: row
+            flex-wrap: nowrap
+            justify-content: space-around
+            align-items: center
+            gap: 2.5em
+            p 
+                font-size: 1.1rem
+            img 
+                height: 50px
+                width: auto
 
-footer 
+#home-footer 
+    position: absolute 
+    bottom: 0 
+    width: 100%
+    height: 2.5rem
+
+footer
+    color: white
     text-align: center
     font-size: 0.7rem
-    font-style: italic
+    font-style: italic 
 
 .data 
     display: none
@@ -88,6 +105,11 @@ footer
 @media only screen and (min-width: 1025px) 
     header 
         font-size: 1.2rem
+
+    #home-container 
+        padding-top: 2.5em
+        position: relative 
+        min-height: 100vh
 
     #home-header
         margin-top: 4em
