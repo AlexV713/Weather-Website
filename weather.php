@@ -44,7 +44,7 @@
 
             <div id="upcoming-forecast">
 
-                <div id="test">
+                <div id="forecast-container">
                     <div class="days">
                         <p><?php echo date("m-d-Y", strtotime("+1 day")); ?></p>
                         <img v-bind:src="'https://www.weatherbit.io/static/img/icons/' + info.data.data[1].weather.icon + '.png'"

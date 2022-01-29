@@ -67,9 +67,9 @@ form
 #upcoming-forecast 
     padding-top: 2em
     color: white
-    margin-left: 0.5em
-    margin-right: 0.5em
-    #test
+    margin-left: 1em
+    margin-right: 1em
+    #forecast-container
         .days
             display: flex
             flex-direction: row
@@ -79,7 +79,7 @@ form
             gap: 2.5em
             p 
                 font-size: 1.1rem
-            img 
+            .icons 
                 height: 50px
                 width: auto
 
@@ -137,21 +137,46 @@ footer
                 margin-bottom: -0.5em
 
     #upcoming-forecast 
-        display: flex 
-        flex-direction: row 
-        flex-wrap: wrap 
-        justify-content: center 
-        align-items: center
-        gap: 2em
-        color: white
-        margin-top: 1em
-        #dates,
-        #temps-section 
-            font-size: 1.6rem
-            line-height: 1.5
-        #icons-section
-            display: flex
-            flex-direction: column
-            .icons 
-                width: 64px 
-                height: 64px
+        padding-top: 3em
+        #forecast-container
+            display: flex 
+            flex-direction: row 
+            flex-wrap: wrap
+            justify-content: center
+            align-items: center
+            gap: 1em
+            margin-left: 5em
+            margin-right: 5em
+            .days 
+                border: solid white 4px
+                border-radius: 20px
+                display: flex 
+                flex-direction: column 
+                justify-content: center 
+                align-items: center
+                gap: 0
+                width: 175px
+                height: 175px
+                .icons 
+                    height: 75px
+                    width: auto
+
+    footer 
+        margin-top: 15em
+
+/* Big Desktop Stylesheets */
+@media only screen and (min-width: 1400px) 
+    #upcoming-forecast 
+        padding-top: 3em
+        #forecast-container
+            display: flex 
+            flex-direction: row 
+            flex-wrap: wrap
+            justify-content: center
+            align-items: center
+            gap: 1em
+            margin-left: 10em
+            margin-right: 10em
+
+    footer 
+        margin-top: 30em

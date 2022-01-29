@@ -98,11 +98,11 @@ form input[type=submit] {
 #upcoming-forecast {
   padding-top: 2em;
   color: white;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin-left: 1em;
+  margin-right: 1em;
 }
 
-#upcoming-forecast #test .days {
+#upcoming-forecast #forecast-container .days {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -120,11 +120,11 @@ form input[type=submit] {
   gap: 2.5em;
 }
 
-#upcoming-forecast #test .days p {
+#upcoming-forecast #forecast-container .days p {
   font-size: 1.1rem;
 }
 
-#upcoming-forecast #test .days img {
+#upcoming-forecast #forecast-container .days .icons {
   height: 50px;
   width: auto;
 }
@@ -198,6 +198,9 @@ footer {
     margin-bottom: -0.5em;
   }
   #upcoming-forecast {
+    padding-top: 3em;
+  }
+  #upcoming-forecast #forecast-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -213,16 +216,13 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    gap: 2em;
-    color: white;
-    margin-top: 1em;
+    gap: 1em;
+    margin-left: 5em;
+    margin-right: 5em;
   }
-  #upcoming-forecast #dates,
-  #upcoming-forecast #temps-section {
-    font-size: 1.6rem;
-    line-height: 1.5;
-  }
-  #upcoming-forecast #icons-section {
+  #upcoming-forecast #forecast-container .days {
+    border: solid white 4px;
+    border-radius: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -230,10 +230,52 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 0;
+    width: 175px;
+    height: 175px;
   }
-  #upcoming-forecast #icons-section .icons {
-    width: 64px;
-    height: 64px;
+  #upcoming-forecast #forecast-container .days .icons {
+    height: 75px;
+    width: auto;
+  }
+  footer {
+    margin-top: 15em;
+  }
+}
+
+/* Big Desktop Stylesheets */
+@media only screen and (min-width: 1400px) {
+  #upcoming-forecast {
+    padding-top: 3em;
+  }
+  #upcoming-forecast #forecast-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 1em;
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+  footer {
+    margin-top: 30em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
