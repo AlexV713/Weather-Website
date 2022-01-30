@@ -148,7 +148,39 @@ footer {
 }
 
 /* Tablet Stylesheets */
-/* @media only screen and (min-width: 480px) */
+@media only screen and (min-width: 480px) {
+  #upcoming-forecast {
+    padding-top: 2em;
+    color: white;
+    margin-left: 10em;
+    margin-right: 10em;
+  }
+  #upcoming-forecast #forecast-container .days {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 3em;
+  }
+  #upcoming-forecast #forecast-container .days p {
+    font-size: 1.3rem;
+  }
+  #upcoming-forecast #forecast-container .days .icons {
+    height: 65px;
+    width: auto;
+  }
+}
+
 /* Desktop Stylesheets */
 @media only screen and (min-width: 1025px) {
   header {
@@ -199,6 +231,8 @@ footer {
   }
   #upcoming-forecast {
     padding-top: 3em;
+    margin-left: 0;
+    margin-right: 0;
   }
   #upcoming-forecast #forecast-container {
     display: -webkit-box;
@@ -217,8 +251,9 @@ footer {
         -ms-flex-align: center;
             align-items: center;
     gap: 1em;
-    margin-left: 5em;
-    margin-right: 5em;
+  }
+  #upcoming-forecast #forecast-container p {
+    font-size: 1.1rem;
   }
   #upcoming-forecast #forecast-container .days {
     border: solid white 4px;

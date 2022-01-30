@@ -99,7 +99,25 @@ footer
     display: none
 
 /* Tablet Stylesheets */
-/* @media only screen and (min-width: 480px) */
+@media only screen and (min-width: 480px)
+    #upcoming-forecast 
+        padding-top: 2em
+        color: white
+        margin-left: 10em
+        margin-right: 10em
+        #forecast-container
+            .days
+                display: flex
+                flex-direction: row
+                flex-wrap: nowrap
+                justify-content: space-around
+                align-items: center
+                gap: 3em
+                p 
+                    font-size: 1.3rem
+                .icons 
+                    height: 65px
+                    width: auto
 
 /* Desktop Stylesheets */
 @media only screen and (min-width: 1025px) 
@@ -138,6 +156,8 @@ footer
 
     #upcoming-forecast 
         padding-top: 3em
+        margin-left: 0
+        margin-right: 0
         #forecast-container
             display: flex 
             flex-direction: row 
@@ -145,8 +165,8 @@ footer
             justify-content: center
             align-items: center
             gap: 1em
-            margin-left: 5em
-            margin-right: 5em
+            p
+                font-size: 1.1rem
             .days 
                 border: solid white 4px
                 border-radius: 20px
